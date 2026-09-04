@@ -1,251 +1,347 @@
+/* =========================
+   ALGEMEEN
+========================= */
+
 * {
-  box-sizing: border-box; /* uitleg over wat dit is */
+  box-sizing: border-box;
 }
 
-/* HTML */
-/* Hier wordt met een 'type selector' een element in de html geselecteerd. */
-/* Dit verwijst naar het <html> element. De <html> krijgt een lichtgele achtergrond. */
+
+/* =========================
+   HTML
+========================= */
 
 html {
-  background:#3A606E;
+  background: rgb(25, 25, 25);
+  background-image: url(../assets/wallpapers.jpeg);
+  background-size: cover;
 }
 
-/* BODY */
-/* Hier wordt met een 'type selector' het <body> element geselecteerd. */
-/* In de <body> wordt de inhoud met "display: flex" in het midden geplaats. */
-/* En krijgt de <body> en alle inhoud een font en kleur. */
+
+/* =========================
+   BODY
+========================= */
+
 body {
   display: flex;
   justify-content: center;
   align-items: center;
-  
-  height: 100vh;
-  
-  font-family: open sans;
-  color: #10214e; /* de tekst kleur wordt in hex kleuren bepaald. */
+
+  min-height: 100vh;
+  margin: 0;
+
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
+
+  color: #03060f;
+
 }
 
-/* ARTICLE */
-/* Het <article> element krijgt hier de styling. */
-/* De inhoud wordt met "display: flex" gepositioneerd en uitgelijnd. */
-/* Er wordt een breedte meegegeven, een minimale en maximale breedte. */
-/* Het <article> element krijgt een kleur, en nog meer ... */
+
+/* =========================
+   ARTICLE / KAART
+========================= */
+
 article {
   position: relative;
-  
+
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: end;
-  
+
   width: 50vw;
-  max-width: 25em;
-  min-width: 20em;
-  
-  border-radius: 1rem;
-  background: rgb(0 239 255);
-  background: linear-gradient(0deg, rgb(0 239 255) 40%, #4e54c8 100%);
-  box-shadow: 0 0 20px 20px rgb(0 0 0 / .1);
-  
-  transition: .25s;
+  max-width: 50em;
+  height: 55em;
+
+  padding: 2rem;
+  border-radius: 0rem;
+  background: rgb(238, 233, 220);
+
+  background-image: url(../assets/arch.jpeg);
+  box-shadow: 0 0 20px 20px rgba(0, 0, 0, 0.211);
+  transition: 0.25s;
 }
 
-/* HEADER */
-/* Hier wordt de inhoud van het <header> element gepositioneerd en uitgelijnd. */
-header {
+.top-section {
+  display: flex;
+  align-items: top;
+  justify-content: space-between;
+  margin-left: 80px;
+
+  width: 100%;
+}
+
+
+/* =========================
+   TITEL
+========================= */
+
+h1 {
+  margin: 3rem 0rem 0 0;
+  font-family: Trixie-Cameo;
+  font-size: 4em;
+  color: #03060f;
+  text-align: start;
+}
+
+/* =========================
+   NAVIGATIE
+========================= */
+
+.side-links {
+  position: absolute;
+
+  left: 3.5rem;
+  top: 50%;
+  bottom: 5rem;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 0.8rem;
+
+  transform: translateY(-50%);
+
+  z-index: 10;
+}
+
+
+/* Links */
+
+.side-links a {
+  display: block;
+  margin-bottom: 0rem;
+
+  color: #03060f;
+
+  text-decoration: none;
+
+  font-family: Trixie-Plain;
+  font-size: 2rem;
+}
+
+
+/* Als je met je muis over de link gaat */
+
+.side-links a:hover {
+  text-decoration: underline;
+}
+
+
+/* =========================
+   HOME
+========================= */
+
+.home-content {
+  width: 100%;
+  margin: 0rem 0 0 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: end;
 }
 
-/* H1 */
-/* Hier krijgt het <h1> element de styling. */
-h1 {
-  margin: 2rem 0 1rem 0; /* Margin is de ruimte om het element heen. Boven beginnen, met de klok mee */
-  
-  color: rgb(0 239 255); /* De tekst kleur wordt in rgb() bepaald. */
-}
 
-/* P */
-/* Hier krijgt de <p> met de class slogan de styling. */
-/* Om een element met class te selecteren gebruik je een . in de selector */
-p.slogan {
-  font-size:1.25em;
-  color:#030711;
-}
+/* =========================
+   FOTO
+========================= */
 
-/* BUTTON */
-/* Hier krijgt de <button> de styling. */
-button {
-  position: absolute;
-  right: 1rem;
-  top: 1rem;
-  
-  width: 2.5rem;
-  height: 2.5rem;
-  padding: .25rem;
-  
-  border: none;
-  border-radius: 50%; /* De border-radius geeft de <button> ronde hoekjes. */
-  background: rgb(0 239 255);
-  
-  scale:.8;
-  
-  transition: .25s; /* Transities op het <button> element duren 0.25 seconden. */
-}
-
-/* Om de <button> styling te geven als iemand met de muis over het element beweegt gebruikt je :hover */
-/* :hover is een 'Pseudo-class selector', daarmee worden interacties op het element gestyled. */
-button:hover {
-  cursor: pointer;
-  background: darkgoldenrod;
-}
-/* Met de 'Pseudo-class selector' :focus kan je bepalen hoe het element er uit moet zien als de tab toets op het toetsenbord wordt gebruikt. */
-button:focus {
-  outline: none;
-  background: darkgoldenrod;
-}
-
-/* In het <button> element staat een <svg> voor het icoon. */
-/* Met een spatie worden alle elementen geselecteerd die in een ander element staan. */
-button svg {
-  position: absolute;
-  top: calc(1.25rem - 12px);
-  left: calc(1.25rem - 12px);
-  
-  stroke: #4e54c8;
-  
-  transition: .25s;
-  transition-delay: .25s; /* Een transitie op het <svg> element begin 0.25 seconde later. */
-}
-/* Met een komma wordt in een keer de styling op de :hover en de :focus van het <svg> element bepaald. */
-button:hover svg, button:focus svg {
-  stroke: lightyellow;
-}
-/* Met de 'Pseudo-class selector' :nth-of-type() wordt een element geselecteerd op basis van de volgorde. */
-/* Hier wordt het tweede <svg> element in de button geselecteerd. */
-button svg:nth-of-type(2) {
-  opacity: 0;
-  
-  transition-delay: 0ms;
-}
-
-/* IMG */
-/* Hier krijgt het <img> element de styling. */
 img {
-  position: relative;
-  top: 2rem;
-  
-  width: 10em;
+  align-self: flex-end;
+  margin: 0 0rem 0rem 6rem;
+  transform: rotate(5deg);
+
+  width: 25em;
   height: auto;
-  
-  border: 5px solid #fff;
-  border-radius: 10em;
-  box-shadow: 0 0 2px 2px rgb(0 0 0 /.2);
-  
-  transition: 1s .15s; /* Transition Shorthand notation: Transities op het img element duren 1 seconde en beginnen 0.15 seconde later */
+
+  border: 10px solid #fff;
+  box-shadow: 0 0 2px 2px rgb(0 0 0 / 0.2);
 }
 
-/* DL, DT, DD  */
-/* De eigenschappen zijn in de HTML opgemaakt in een Description List element (DL) */
-/* De Description List element (DL) is een lijst met termen en beschrijvingen. */
-/* In deze DL staan 3 groepen met code skills, in CSS is de layout van de DT elementen met een Grid gepositioneerd.  */
 
-dl {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-areas:
-    "html-dd css-dd js-dd"
-    "html-dt css-dt js-dt"
-    ;
-  justify-items: center;
+/* =========================
+   INFO BOX
+========================= */
+
+.info {
+  width: 95%;
+
+  position: relative;
+
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+
+  border: 2px solid #333;
+
+  background: transparent;
+}
+
+
+/* =========================
+   NORMALE RIJ
+========================= */
+
+.row {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+
+  min-height: 55px;
+
+  border-bottom: 2px solid #333;
+}
+
+
+/* =========================
+   LABELS
+========================= */
+
+.label {
+  align-self: flex-start;
+
+  padding: 8px;
+
+  font-size: 10px;
+  font-weight: bold;
+  font-family: american typewriter;
+
+  letter-spacing: 0;
+}
+
+
+/* =========================
+   WAARDES
+========================= */
+
+.value {
+  flex: 1;
+
+  text-align: center;
+
+  font-family: Trixie-Plain;
+  font-size: 28px;
+}
+
+
+/* =========================
+   TWEE KOLOMMEN
+========================= */
+
+.double-row {
+  display: flex;
+
+  width: 100%;
+
+  min-height: 55px;
+
+  border-bottom: 2px solid #333;
+}
+
+
+/* Laatste rij geen onderste lijn */
+
+.double-row:last-child {
+  border-bottom: none;
+}
+
+
+/* =========================
+   HALVE KOLOM
+========================= */
+
+.half {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  width: 50%;
+
+  border-right: 2px solid #333;
+}
+
+
+/* Laatste kolom geen rechter lijn */
+
+.half:last-child {
+  border-right: none;
+}
+
+
+/* =========================
+   ABOUT / WORK PAGINA'S
+========================= */
+
+/* Standaard zijn ze verborgen */
+
+.page {
+  display: none;
+
+  width: 80%;
+
+  margin: 0rem auto;
+
+  text-align: center;
+}
+
+
+/* Pagina wordt zichtbaar wanneer
+   de bijbehorende link wordt aangeklikt */
+
+.page:target {
+  display: block;
+}
+
+
+/* =========================
+   ABOUT / WORK TITEL
+========================= */
+
+.page h2 {
+  margin: 1rem 0 0 0;
   align-items: start;
-  
-  width: 100%;
-  margin-top: -3rem;
-  margin-bottom: 0;
-  padding: 5rem 0 3rem;
-  
-  text-align: center;
-  background: rgb(255 255 255);
+  text-align:start;
+  font-family: Trixie-Plain;
+  font-size: 2em;
 
-  dt {
-    margin-top: .25rem;
-    padding-top: .25rem;
-    
-    border-top: 1px solid rgb(0 0 0 / 0.3);
-    font-weight: bold;
-    
-    &:nth-of-type(1) {
-      grid-area: html-dt;
-    }
-    
-    &:nth-of-type(2) {
-      grid-area: css-dt;
-      translate:0 1rem;
-    }
-    
-    &:nth-of-type(3) {
-      grid-area: js-dt;
-    }
-  }
-
-  dd {
-    margin: 0;
-    padding-left: .3rem;
-    
-    transition: .25s .3s;
-    
-    &:nth-of-type(2) {
-      translate:0 1rem;
-    }
-  }
+  color: #03060f;
 }
 
-/* P */
-/* Hier krijgen alle <p> elementen een styling. */
-p {
-  margin: 0;
+
+/* =========================
+   ABOUT / WORK TEKST
+========================= */
+
+.page p {
+  margin: 1rem 0 0 2rem;
+  text-align: start;
+  font-family: Trixie-light;
+  font-size: 24px;
+  line-height: 1.2;
 }
 
-/* Om alleen de <p> elementen te stylen die in het <article> staat gebruik je de > de 'Child combinator selector'.
-/* Met de 'Child combinator selector' selecteer je alle <p> elementen die een directe  kinderen van het <article> zijn. */
-/* Dit selecteert dus niet de <p> in de <header>. */
-article > p {
-  width: 100%;
-  margin-top: 0;
-  padding: 3rem 2rem;
-  
-  background: rgb(255 255 255 / 0.5);
-  border-radius: 0 0 1rem 1rem;
-  text-align: center;
+
+/* =========================
+   HOME VERBERGEN
+========================= */
+
+/* Wanneer About geopend is */
+
+#about:target ~ .home-content {
+  display: none;
 }
 
-/* Deze styles zijn van toepassing als op de knop wordt geklikt */
-body.is-expanded {
-  font-size: 1.15em;
+
+/* Wanneer Work geopend is */
+
+#work:target ~ .home-content {
+  display: none;
 }
 
-body.is-expanded article {
-  width: 60vw;
-  max-width: 60vw;
-}
+#interests:target ~ .home-content {
+  display: none;
 
-body.is-expanded button svg:first-of-type {
-  opacity: 0;
-  transition-delay: 0ms;
-}
-
-body.is-expanded button svg:nth-of-type(2) {
-  opacity: 1;
-  transition-delay: .25s;
-}
-
-body.is-expanded dl dd {
-  font-size: 1.75em;
-}
-
-body.is-expanded img {
-  width: 15em;
 }

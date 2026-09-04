@@ -3,57 +3,144 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>FDND Visitekaartje</title>
+
     <link rel="stylesheet" href="styles/style.css">
   </head>
-  <body>
-    
-    <article>
-      
-      <header>
-        
-        <h1>Miriale Pineda</h1>
-        
-        <p class="slogan"><em>Creatieve Frontend Developer in spé</em></p>
-        
-        <button>
-          <svg width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
-            <title>Wijzig layout</title>
-            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-            <path d="M4 8v-2a2 2 0 0 1 2 -2h2"></path>
-            <path d="M4 16v2a2 2 0 0 0 2 2h2"></path>
-            <path d="M16 4h2a2 2 0 0 1 2 2v2"></path>
-            <path d="M16 20h2a2 2 0 0 0 2 -2v-2"></path>
-          </svg>
-          <svg width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="red" fill="none" stroke-linecap="round" stroke-linejoin="round">
-            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-            <path d="M15 19v-2a2 2 0 0 1 2 -2h2"></path>
-            <path d="M15 5v2a2 2 0 0 0 2 2h2"></path>
-            <path d="M5 15h2a2 2 0 0 1 2 2v2"></path>
-            <path d="M5 9h2a2 2 0 0 0 2 -2v-2"></path>
-          </svg>
-        </button>
-        
-      </header>
-  
-      <img src="assets/foto.png" alt="" width="800" height="800">
 
-      <dl>
-        <dt>HTML</dt>
-        <dd>🏆🏆🏆</dd>
+  <body>
+
+    <article>
+
+      <div class="top-section">
+
+  <h1>ARCHIVE</h1>
+
+  <img src="assets/IMG_4121.png" alt="Portrait of Miriale Pineda">
+
+</div>
+
+      <!-- NAVIGATIE -->
+      <nav class="side-links">
+        <a href="#">M. PINEDA</a>
+        <a href="#about">about</a>
+        <a href="#work">work & hobbies</a>
+        <a href="#interests">interests</a>
+      </nav>
+
+
+      <!-- ABOUT PAGINA -->
+      <section id="about" class="page">
+
+        <h2>about</h2>
+
+        <p>
+          Miriale is an Amsterdam-based creative with a background in Graphic Design, currently studying front-end development. <br> <br>
+          As a future front-end developer, she aims to combine her creative eye with technology to build engaging, visually strong digital experiences.
+        </p>
+
+      </section>
+
+
+      <!-- WORK PAGINA -->
+      <section id="work" class="page">
+
+        <h2>work & hobbies</h2>
+
+        <p>
+          Alongside her main job at Schiphol, Miriale works as an art director on creative projects for New Offsprings, an Amsterdam-based streetwear brand. <br> <br>
+        She also runs KYØ LAB as a tooth gem artist.
+        </p>
+
+      </section>
+
+      <!-- INTERESTS PAGINA -->
+      <section id="interests" class="page">
+
+        <h2>interests</h2>
+
+        <p>Music · R&B · Fashion · Gaming · Videography · Editing · Concerts · Marvel · Collectibles</p>
         
-        <dt>CSS</dt>
-        <dd>🏆🏆</dd>
-        
-        <dt>JavaScript</dt>
-        <dd>🏆🏆🏆🏆</dd>
-      </dl>
-  
-      <p>Het WEB is te gek! <br> Met HTML, CSS en JS kan ik vette, interactieve web apps maken.</p>
-      
+      </section>
+
+
+      <!-- HOME PAGINA -->
+      <div class="home-content">
+
+        <!-- INFORMATIE -->
+        <section class="info">
+
+          <!-- NAME -->
+          <div class="row">
+            <span class="label">NAME</span>
+
+            <span class="value">
+              MIRIALE PINEDA
+            </span>
+          </div>
+
+
+          <!-- OCCUPATION -->
+          <div class="row">
+            <span class="label">OCCUPATION</span>
+
+            <span class="value">
+              CREATIVE FRONTEND DEVELOPER
+            </span>
+          </div>
+
+
+          <!-- ETHNICITY + LIVES IN -->
+          <div class="double-row">
+
+            <div class="half">
+              <span class="label">ETHNICITY</span>
+
+              <span class="value">
+                FILIPINO
+              </span>
+            </div>
+
+
+            <div class="half">
+              <span class="label">LIVES IN</span>
+
+              <span class="value">
+                AMSTERDAM
+              </span>
+            </div>
+
+          </div>
+
+
+          <!-- AGE + SIGN -->
+          <div class="double-row">
+
+            <div class="half">
+              <span class="label">AGE</span>
+
+              <span class="value">
+                24
+              </span>
+            </div>
+
+
+            <div class="half">
+              <span class="label">SIGN</span>
+
+              <span class="value">
+                SCORPIO
+              </span>
+            </div>
+
+          </div>
+
+        </section>
+
+      </div>
+
     </article>
 
-    <script src="scripts/script.js"></script>
-    
   </body>
 </html>
