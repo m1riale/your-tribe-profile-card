@@ -38,9 +38,8 @@ body {
 
 }
 
-
 /* =========================
-   ARTICLE / KAART
+   ARTICLE
 ========================= */
 
 article {
@@ -68,7 +67,6 @@ article {
   align-items: top;
   justify-content: space-between;
   margin-left: 80px;
-
   width: 100%;
 }
 
@@ -122,7 +120,7 @@ h1 {
 }
 
 
-/* Als je met je muis over de link gaat */
+/* muis over de link */
 
 .side-links a:hover {
   text-decoration: underline;
@@ -213,7 +211,7 @@ img {
 
 
 /* =========================
-   WAARDES
+   VALUE
 ========================= */
 
 .value {
@@ -275,7 +273,6 @@ img {
    ABOUT / WORK PAGINA'S
 ========================= */
 
-/* Standaard zijn ze verborgen */
 
 .page {
   display: none;
@@ -286,10 +283,6 @@ img {
 
   text-align: center;
 }
-
-
-/* Pagina wordt zichtbaar wanneer
-   de bijbehorende link wordt aangeklikt */
 
 .page:target {
   display: block;
