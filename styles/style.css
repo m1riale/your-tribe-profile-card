@@ -261,7 +261,6 @@ img {
   border-right: 2px solid #333;
 }
 
-
 /* Laatste kolom geen rechter lijn */
 
 .half:last-child {
@@ -326,7 +325,6 @@ img {
 #about:target ~ .home-content {
   display: none;
 }
-
 
 /* Wanneer Work geopend is */
 
